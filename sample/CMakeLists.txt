@@ -1,0 +1,13 @@
+ADD_EXECUTABLE(sample)
+
+TARGET_SOURCES(sample 
+  PRIVATE main.cpp
+)
+
+TARGET_INCLUDE_DIRECTORIES(sample
+  PUBLIC ${PROJECT_SOURCE_DIR} ${Boost_INCLUDE_DIRS}
+)
+
+TARGET_LINK_LIBRARIES(sample
+  PUBLIC Threads::Threads
+)
